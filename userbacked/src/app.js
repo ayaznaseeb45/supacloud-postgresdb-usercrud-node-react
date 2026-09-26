@@ -1,5 +1,8 @@
+
 const express = require("express");
 const cors = require("cors");
+
+const userRoutes = require("./routes/user.routes");
 
 const app = express();
 
@@ -7,12 +10,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Test Route
+// Health Check
 app.get("/", (req, res) => {
   res.json({
-    message: "User Backend API is running"
+    message: "User Backend API is running",
   });
 });
 
-// Export Express application
+// User Routes
+app.use("/api/users", userRoutes);
+
 module.exports = app;
