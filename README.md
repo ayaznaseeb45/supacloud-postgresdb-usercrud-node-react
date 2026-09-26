@@ -1,24 +1,24 @@
-﻿# SupaCloud - Node.js + React CRUD Project
+﻿# SupaCloud CRUD - Node.js + React
 
-A simple dummy CRUD project for practicing full-stack development. You can create, view, update, and delete users, with a separate About page.
+A simple dummy CRUD project built with React and Node.js, using a PostgreSQL database hosted on Supabase Cloud. You can create, view, update, and delete users, with a separate About page.
 
 ## Tech stack
 
 - **Frontend:** React, Vite, Tailwind CSS, and Axios.
 - **Backend:** Node.js, Express, Zod, and Prisma.
-- **Database:** PostgreSQL (use your Supabase database or a local PostgreSQL database).
+- **Database:** PostgreSQL hosted on Supabase Cloud, accessed through Prisma.
 
 ## Requirements
 
 - Node.js 22.12 or newer and npm. The frontend's Vite package requires Node.js `^20.19.0 || >=22.12.0`.
 - Git to clone the repository, or download and extract the ZIP from GitHub.
-- A PostgreSQL database and its connection URL.
+- A Supabase project with a cloud-hosted PostgreSQL database and its connection URL.
 
 ## 1. Download the project
 
 ```bash
-git clone https://github.com/ayaznaseeb45/Supabase-Practice.git
-cd Supabase-Practice
+git clone https://github.com/ayaznaseeb45/supacloud-crud-node-react.git
+cd supacloud-crud-node-react
 ```
 
 There are two separate apps: `userbacked` (backend) and `userfrontend` (frontend). Run `npm i` inside each folder, not at the repository root.
@@ -39,7 +39,7 @@ PORT=5000
 DATABASE_URL="postgresql://USERNAME:PASSWORD@HOST:5432/DATABASE?sslmode=require"
 ```
 
-Replace the example URL with your own PostgreSQL connection string. For Supabase, copy the PostgreSQL connection string from your project's connection settings and replace its password placeholder with your database password. This is a database connection URL, not the Supabase project API URL or API key. If using local PostgreSQL, use its local connection string instead.
+Replace the example URL with your own Supabase PostgreSQL connection string. Copy it from your Supabase project's connection settings and replace its password placeholder with your database password. Use the database connection URL, not the Supabase project API URL or API key. The database runs on Supabase Cloud, so you do not need to install PostgreSQL locally. The React frontend and Node.js backend run locally with the steps below.
 
 Use a database intended for this practice project. The next command creates or syncs the tables defined in `prisma/schema.prisma`.
 
@@ -100,4 +100,6 @@ This builds and previews the frontend locally. The backend must still be running
 - **Vite reports an unsupported Node.js version:** Check `node -v` against the version requirement above.
 
 Local `.env` files and `node_modules` are excluded from Git. Keep database credentials in your local `.env` file.
+
+
 
