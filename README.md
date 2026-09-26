@@ -17,8 +17,8 @@ A simple dummy CRUD project built with React and Node.js, using a PostgreSQL dat
 ## 1. Download the project
 
 ```bash
-git clone https://github.com/ayaznaseeb45/supacloud-postgresdb-crud-node-react.git
-cd supacloud-postgresdb-crud-node-react
+git clone https://github.com/ayaznaseeb45/supacloud-postgresdb-usercrud-node-react.git
+cd supacloud-postgresdb-usercrud-node-react
 ```
 
 There are two separate apps: `userbacked` (backend) and `userfrontend` (frontend). Run `npm i` inside each folder, not at the repository root.
@@ -100,7 +100,3 @@ This builds and previews the frontend locally. The backend must still be running
 - **Vite reports an unsupported Node.js version:** Check `node -v` against the version requirement above.
 
 Local `.env` files and `node_modules` are excluded from Git. Keep database credentials in your local `.env` file.
-
-
-
-
