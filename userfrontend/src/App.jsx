@@ -27,10 +27,9 @@ function App() {
       <main className="app-main">
         {currentPage === "about" ? <AboutPage /> : <UsersPage />}
       </main>
-      <footer className="site-footer">SupaCloud - Node.js + React CRUD Project</footer>
+      <footer className="site-footer">SupaCloud - Node.js + React CRUD Project by AyazShafaq</footer>
     </>
   );
 }
 
 export default App;
-

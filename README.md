@@ -48,8 +48,11 @@ From the same `userbacked` terminal, run:
 ```bash
 npx prisma generate
 npx prisma db push
+npx prisma db execute --schema prisma/schema.prisma --file prisma/email-unique.sql
 npm run dev
 ```
+
+The extra SQL index prevents duplicate emails even when letter case or surrounding spaces differ. Apply it after syncing the Prisma schema. If existing duplicates prevent index creation, resolve those records first; this command does not delete users.
 
 Keep this terminal running. The backend starts at `http://localhost:5000`.
 

@@ -1,11 +1,11 @@
-
+﻿
 const { z } = require("zod");
 
 // Create User Schema
 const createUserSchema = z.object({
   name: z.string().min(2, "Name must contain at least 2 characters"),
 
-  email: z.email("Invalid email address"),
+  email: z.string().trim().toLowerCase().pipe(z.email("Invalid email address")),
 
   age: z.number().int().positive().optional(),
 
@@ -19,3 +19,4 @@ module.exports = {
   createUserSchema,
   updateUserSchema,
 };
+

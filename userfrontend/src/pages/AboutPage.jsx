@@ -10,9 +10,9 @@
           Node.js + React CRUD Project.
         </h1>
         <p className="mt-5 max-w-2xl leading-8 text-gray-600">
-          SupaCloud is a dummy project built to practice full-stack development.
+          SupaCloud is a dummy project built for practice.
           It brings a frontend and backend together so you can create, view,
-          update, and delete users. These four actions are known as CRUD.
+          update, and delete users.
         </p>
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
